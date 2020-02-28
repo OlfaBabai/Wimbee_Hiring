@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring", "Wimbee_Hiring\Wimbee_Hiring.csproj", "{D921B374-A158-4586-8204-E2116B1B7142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.Models", "Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj", "{6AC909B5-96F1-48C4-A9E8-10C32AEA283C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.Models", "Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj", "{6AC909B5-96F1-48C4-A9E8-10C32AEA283C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.Persistence", "Wimbee_Hiring.Persistence\Wimbee_Hiring.Persistence.csproj", "{30275EDE-8CEE-4206-BAA0-B8B35F92BDF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.Persistence", "Wimbee_Hiring.Persistence\Wimbee_Hiring.Persistence.csproj", "{30275EDE-8CEE-4206-BAA0-B8B35F92BDF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.Services", "Wimbee_Hiring.Services\Wimbee_Hiring.Services.csproj", "{98DCF7A4-4B4C-4C85-B9EE-48757A85CEB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.Services", "Wimbee_Hiring.Services\Wimbee_Hiring.Services.csproj", "{98DCF7A4-4B4C-4C85-B9EE-48757A85CEB5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.API", "Wimbee_Hiring.API\Wimbee_Hiring.API.csproj", "{AA3C0D32-4DB9-41D8-8C10-46B853C5D1BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.API", "Wimbee_Hiring.API\Wimbee_Hiring.API.csproj", "{AA3C0D32-4DB9-41D8-8C10-46B853C5D1BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D921B374-A158-4586-8204-E2116B1B7142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D921B374-A158-4586-8204-E2116B1B7142}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D921B374-A158-4586-8204-E2116B1B7142}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D921B374-A158-4586-8204-E2116B1B7142}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AC909B5-96F1-48C4-A9E8-10C32AEA283C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AC909B5-96F1-48C4-A9E8-10C32AEA283C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AC909B5-96F1-48C4-A9E8-10C32AEA283C}.Release|Any CPU.ActiveCfg = Release|Any CPU

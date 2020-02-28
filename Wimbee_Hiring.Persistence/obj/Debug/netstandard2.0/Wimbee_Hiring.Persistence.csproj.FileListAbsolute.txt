@@ -3,3 +3,15 @@ C:\Users\pc\source\repos\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netst
 C:\Users\pc\source\repos\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.csprojAssemblyReference.cache
 C:\Users\pc\source\repos\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.AssemblyInfoInputs.cache
 C:\Users\pc\source\repos\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.AssemblyInfo.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netstandard2.0\System.Data.Entity.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netstandard2.0\Wimbee_Hiring.Models.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.csprojAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.AssemblyInfoInputs.cache
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.AssemblyInfo.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netstandard2.0\Wimbee_Hiring.Persistence.deps.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netstandard2.0\Wimbee_Hiring.Persistence.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netstandard2.0\Wimbee_Hiring.Models.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.csproj.CopyComplete
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netstandard2.0\Wimbee_Hiring.Persistence.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netstandard2.0\Wimbee_Hiring.Persistence.pdb

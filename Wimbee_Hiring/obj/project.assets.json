@@ -5402,11 +5402,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring\\Wimbee_Hiring.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring\\Wimbee_Hiring.csproj",
       "projectName": "Wimbee_Hiring",
-      "projectPath": "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring\\Wimbee_Hiring.csproj",
+      "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring\\Wimbee_Hiring.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

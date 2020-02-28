@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj": {}
+    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj": {
+    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj",
         "projectName": "Wimbee_Hiring.Services",
-        "projectPath": "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj",
+        "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\source\\repos\\Wimbee_Hiring\\Wimbee_Hiring.Services\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
