@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿  <Project Sdk="Microsoft.NET.Sdk">
+   
+    <PropertyGroup>
+      <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    </PropertyGroup>
+  
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj" />
+    <ProjectReference Include="..\Wimbee_Hiring.Persistence\Wimbee_Hiring.Persistence.csproj" />
+  </ItemGroup>
 
 </Project>

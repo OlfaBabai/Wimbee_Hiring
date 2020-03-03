@@ -52,3 +52,5 @@ C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreap
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.pdb
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Services.dll
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Services.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.MvcApplicationPartsAssemblyInfo.cache

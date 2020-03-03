@@ -9,16 +9,18 @@ namespace Wimbee_Hiring.Persistence
 {
     public class AppDBContext : DbContext
     {
-       string connectionString = "@server=http://localhost:4200/ ;database=Wimbee_Hiring;Integrated Security=true";
+       string connectionString = "@Server=.;database=Wimbee_Hiring;Integrated Security=true";
+
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(connectionString);
         }
-        public AppDBContext( DbContextOptions<AppDBContext> options ): base(options)
+
+        public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
         {
-
-
         }
+
         public DbSet<Person> Person { get; set; }
         public DbSet<Caller> Caller { get; set; }
         public DbSet<Recrutor> Recrutor { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wimbee_Hiring.Models
 {
-   public class Person
+   public class Person 
     {
         
         public int IdPerson { get; set; }
