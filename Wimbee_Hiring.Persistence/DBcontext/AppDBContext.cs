@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using Wimbee_Hiring.Models;
 namespace Wimbee_Hiring.Persistence
 {
-    public class AppDBContext : DbContext
+    public class AppDBContext : Microsoft.EntityFrameworkCore.DbContext
     {
-       string connectionString = "@Server=.;database=Wimbee_Hiring;Integrated Security=true";
+        string connectionString = "@Server=.;database=Wimbee_Hiring;Integrated Security=true";
 
-       
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(connectionString);
@@ -27,13 +27,13 @@ namespace Wimbee_Hiring.Persistence
         public DbSet<Ticket> Ticket { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {      
+        {
             // Person's Properties
             modelBuilder.Entity<Person>(entity =>
             {
                 entity.HasKey(p => p.IdPerson);
-                entity.Property(p => p.FirstName).IsRequired(); 
-                entity.Property(p => p.LastName).IsRequired(); 
+                entity.Property(p => p.FirstName).IsRequired();
+                entity.Property(p => p.LastName).IsRequired();
                 entity.Property(p => p.Job).IsRequired();
             });
 
@@ -108,8 +108,8 @@ namespace Wimbee_Hiring.Persistence
                 entity.Property(t => t.Writer).HasColumnName("Writer");
             });
         }
-            
 
-        }
+
     }
+}
 

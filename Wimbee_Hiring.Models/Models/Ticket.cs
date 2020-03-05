@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Wimbee_Hiring.Models
 {
-    public class Ticket 
+    public class Ticket
     {
         public int IdTicket { get; set; }
         public string NameTicket { get; set; }
