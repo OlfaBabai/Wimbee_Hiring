@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj": {}
+    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\test\\test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj": {
+    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\test\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj",
-        "projectName": "Wimbee_Hiring.Models",
-        "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\test\\test.csproj",
+        "projectName": "test",
+        "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\test\\test.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,16 +42,6 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.2, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

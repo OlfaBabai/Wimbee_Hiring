@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj" />
     <ProjectReference Include="..\Wimbee_Hiring.Services\Wimbee_Hiring.Services.csproj" />
   </ItemGroup>
 

@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="System.Data.Entity">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\System.Data.Entity.dll</HintPath>
     </Reference>

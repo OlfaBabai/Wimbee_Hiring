@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj": {}
+    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj": {
+    "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj",
-        "projectName": "Wimbee_Hiring.Models",
-        "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Model.csproj",
+        "projectName": "Wimbee_Hiring.Model",
+        "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Model.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Models\\obj\\",
         "projectStyle": "PackageReference",

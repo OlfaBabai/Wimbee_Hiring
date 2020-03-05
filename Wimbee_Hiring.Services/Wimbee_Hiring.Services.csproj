@@ -6,7 +6,6 @@
   
 
   <ItemGroup>
-    <ProjectReference Include="..\Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj" />
     <ProjectReference Include="..\Wimbee_Hiring.Persistence\Wimbee_Hiring.Persistence.csproj" />
   </ItemGroup>
 

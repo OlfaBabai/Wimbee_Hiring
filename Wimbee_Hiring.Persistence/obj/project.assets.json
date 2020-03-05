@@ -1716,16 +1716,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "Wimbee_Hiring.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Wimbee_Hiring.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Wimbee_Hiring.Models.dll": {}
-        }
       }
     }
   },
@@ -6239,11 +6229,6 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "Wimbee_Hiring.Models/1.0.0": {
-      "type": "project",
-      "path": "../Wimbee_Hiring.Models/Wimbee_Hiring.Models.csproj",
-      "msbuildProject": "../Wimbee_Hiring.Models/Wimbee_Hiring.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6252,8 +6237,7 @@
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.2",
-      "NETStandard.Library >= 2.0.3",
-      "Wimbee_Hiring.Models >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -6263,11 +6247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Persistence\\Wimbee_Hiring.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Persistence\\Wimbee_Hiring.Persistence.csproj",
       "projectName": "Wimbee_Hiring.Persistence",
-      "projectPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Persistence\\Wimbee_Hiring.Persistence.csproj",
+      "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Persistence\\Wimbee_Hiring.Persistence.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Persistence\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -6287,11 +6271,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -1281,24 +1281,13 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Wimbee_Hiring.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Wimbee_Hiring.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Wimbee_Hiring.Models.dll": {}
-        }
-      },
       "Wimbee_Hiring.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.2",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2",
-          "Wimbee_Hiring.Models": "1.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2"
         },
         "compile": {
           "bin/placeholder/Wimbee_Hiring.Persistence.dll": {}
@@ -1311,7 +1300,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Wimbee_Hiring.Models": "1.0.0",
           "Wimbee_Hiring.Persistence": "1.0.0"
         },
         "compile": {
@@ -5027,11 +5015,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Wimbee_Hiring.Models/1.0.0": {
-      "type": "project",
-      "path": "../Wimbee_Hiring.Models/Wimbee_Hiring.Models.csproj",
-      "msbuildProject": "../Wimbee_Hiring.Models/Wimbee_Hiring.Models.csproj"
-    },
     "Wimbee_Hiring.Persistence/1.0.0": {
       "type": "project",
       "path": "../Wimbee_Hiring.Persistence/Wimbee_Hiring.Persistence.csproj",
@@ -5050,7 +5033,6 @@
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.2",
-      "Wimbee_Hiring.Models >= 1.0.0",
       "Wimbee_Hiring.Services >= 1.0.0"
     ]
   },
@@ -5061,11 +5043,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.API\\Wimbee_Hiring.API.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.API\\Wimbee_Hiring.API.csproj",
       "projectName": "Wimbee_Hiring.API",
-      "projectPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.API\\Wimbee_Hiring.API.csproj",
+      "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.API\\Wimbee_Hiring.API.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.API\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -5085,11 +5067,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Models\\Wimbee_Hiring.Models.csproj"
-            },
-            "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj": {
-              "projectPath": "C:\\Users\\pc\\Desktop\\pfe\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj"
+            "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj": {
+              "projectPath": "C:\\Users\\pc\\Documents\\GitHub\\Wimbee_Hiring\\Wimbee_Hiring.Services\\Wimbee_Hiring.Services.csproj"
             }
           }
         }
