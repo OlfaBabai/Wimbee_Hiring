@@ -1,0 +1,15 @@
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Service.deps.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Service.runtimeconfig.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Service.runtimeconfig.dev.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Service.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Service.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Models.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Models.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Service.csprojAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Service.AssemblyInfoInputs.cache
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Service.AssemblyInfo.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Service.csproj.CopyComplete
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Service.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Service\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Service.pdb

@@ -9,6 +9,7 @@ namespace Wimbee_Hiring.Models
         public int IdTicket { get; set; }
         public string NameTicket { get; set; }
         public string State { get; set; }
+        public int IdWriter { get; set; }
         public Person Writer { get; set; }
     }
 }

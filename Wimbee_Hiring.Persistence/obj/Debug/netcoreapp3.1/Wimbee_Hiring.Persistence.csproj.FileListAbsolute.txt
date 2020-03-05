@@ -1,4 +1,13 @@
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.deps.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.runtimeconfig.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.runtimeconfig.dev.json
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.pdb
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Models.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\bin\Debug\netcoreapp3.1\Wimbee_Hiring.Models.pdb
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.csprojAssemblyReference.cache
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.AssemblyInfoInputs.cache
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.AssemblyInfo.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.csproj.CopyComplete
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Persistence\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Persistence.pdb
