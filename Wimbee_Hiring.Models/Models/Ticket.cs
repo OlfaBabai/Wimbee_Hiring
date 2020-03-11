@@ -11,5 +11,6 @@ namespace Wimbee_Hiring.Models
         public string State { get; set; }
         public int IdWriter { get; set; }
         public Person Writer { get; set; }
+
     }
 }

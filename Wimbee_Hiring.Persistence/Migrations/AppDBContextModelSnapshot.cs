@@ -7,7 +7,7 @@ using Wimbee_Hiring.Persistence;
 
 namespace Wimbee_Hiring.Persistence.Migrations
 {
-    [DbContext(typeof(AppDBContext))]
+    [DbContext(typeof(CodingBlastDdContext))]
     partial class AppDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -64,6 +64,10 @@ namespace Wimbee_Hiring.Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("IdWriter")
+                        .HasColumnName("IdWriter")
+                        .HasColumnType("int");
+
                     b.Property<string>("NameTicket")
                         .IsRequired()
                         .HasColumnName("NameTicket")
@@ -75,6 +79,8 @@ namespace Wimbee_Hiring.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdTicket");
+
+                    b.HasIndex("IdWriter");
 
                     b.ToTable("Ticket");
                 });
@@ -91,6 +97,15 @@ namespace Wimbee_Hiring.Persistence.Migrations
                     b.HasBaseType("Wimbee_Hiring.Models.Person");
 
                     b.HasDiscriminator().HasValue("Recrutor");
+                });
+
+            modelBuilder.Entity("Wimbee_Hiring.Models.Ticket", b =>
+                {
+                    b.HasOne("Wimbee_Hiring.Models.Person", "Writer")
+                        .WithMany("TicketsWritten")
+                        .HasForeignKey("IdWriter")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -8,7 +8,7 @@ using Wimbee_Hiring.Persistence;
 
 namespace Wimbee_Hiring.Persistence.Migrations
 {
-    [DbContext(typeof(AppDBContext))]
+    [DbContext(typeof(CodingBlastDdContext))]
     [Migration("20200305134501_FirstMigration")]
     partial class FirstMigration
     {

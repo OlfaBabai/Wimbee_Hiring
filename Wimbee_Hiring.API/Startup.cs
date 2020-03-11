@@ -11,9 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Wimbee_Hiring.Models;
 using Wimbee_Hiring.Persistence;
-
-
+using Wimbee_Hiring.Persistence.Design_Patterns.UnitOfWork;
+using Wimbee_Hiring.Service;
+using Wimbee_Hiring.Service.Interfaces;
 
 namespace Wimbee_Hiring.API
 {
@@ -31,7 +33,10 @@ namespace Wimbee_Hiring.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PersonDBConnection")));
+            services.AddDbContext<CodingBlastDdContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PersonDBConnection")));
+            services.AddTransient<IGenericRepository<Person>,GenericRepository<Person>>();
+            services.AddTransient<IGenericRepository<Ticket>,GenericRepository<Ticket>>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllers();
 
         }
