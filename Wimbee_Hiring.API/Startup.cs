@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Wimbee_Hiring.Models;
 using Wimbee_Hiring.Persistence;
 using Wimbee_Hiring.Persistence.Design_Patterns.UnitOfWork;
+using Wimbee_Hiring.Persistence.Design_Patterns.Factory;
 using Wimbee_Hiring.Service;
 using Wimbee_Hiring.Service.Interfaces;
 
@@ -37,6 +38,8 @@ namespace Wimbee_Hiring.API
             services.AddTransient<IGenericRepository<Person>,GenericRepository<Person>>();
             services.AddTransient<IGenericRepository<Ticket>,GenericRepository<Ticket>>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddSingleton<IFactory<Person>, Factory<Person>>();
+            services.AddSingleton<IFactory<Ticket>, Factory<Ticket>>();
             services.AddControllers();
 
         }

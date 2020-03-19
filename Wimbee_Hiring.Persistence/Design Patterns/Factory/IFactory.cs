@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wimbee_Hiring.Persistence.Design_Patterns.Factory
 {
-    interface IFactory<T> where T:class
+    public interface IFactory<T> where T:class
     {
         T create();
     }
