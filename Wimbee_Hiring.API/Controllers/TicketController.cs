@@ -15,9 +15,9 @@ namespace Wimbee_Hiring.API.Controllers
     public class TicketController : Controller
     {
         private readonly CodingBlastDdContext _context;
-        private IGenericRepository<Ticket> ticket;
+        private GenericRepository<Ticket> ticket;
 
-        public TicketController(IGenericRepository<Ticket> _ticket)
+        public TicketController(GenericRepository<Ticket> _ticket)
         {
             ticket=_ticket;
         }
@@ -49,54 +49,58 @@ namespace Wimbee_Hiring.API.Controllers
 
         [HttpGet]
         // GET: Ticket/Create
-        public IActionResult Create()
-        {
-            ViewData["IdWriter"] = new SelectList(_context.Person, "IdPerson", "Discriminator");
-            return View();
-        }
+        // méthode get : create | modifiée
+        //public IActionResult Create()
+        //{
+            
+        //    return View();
+        //}
 
         // POST: Ticket/Create
+        //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket ticket)
+        public async Task<IActionResult> Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(ticket);
+                ticket.Insert(tik);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdWriter"] = new SelectList(_context.Person, "IdPerson", "Discriminator", ticket.IdWriter);
-            return View(ticket);
+            else return RedirectToAction(nameof(Create));
+
         }
 
         // GET: Ticket/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //METHODE GET : edit ticket (non modifiée)
+        //public async Task<IActionResult> Edit(int id)
+        //{
+        //    if (id == 0)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var ticket = await _context.Ticket.FindAsync(id);
-            if (ticket == null)
-            {
-                return NotFound();
-            }
-            ViewData["IdWriter"] = new SelectList(_context.Person, "IdPerson", "Discriminator", ticket.IdWriter);
-            return View(ticket);
-        }
+        //    Ticket tik = ticket.GetById(id);
+        //    if (tik == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    ViewData["IdWriter"] = new SelectList(_context.Person, "IdPerson", "Discriminator", tik.IdWriter);
+        //    return View(tik);
+        //}
 
         // POST: Ticket/Edit/5
+        //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Ticket ticket)
+        public async Task<IActionResult> Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
         {
-            if (id != ticket.IdTicket)
+            if (id != tik.IdTicket)
             {
                 return NotFound();
             }
@@ -105,12 +109,12 @@ namespace Wimbee_Hiring.API.Controllers
             {
                 try
                 {
-                    _context.Update(ticket);
+                    ticket.Update(tik);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TicketExists(ticket.IdTicket))
+                    if (!TicketExists(tik.IdTicket))
                     {
                         return NotFound();
                     }
@@ -121,7 +125,6 @@ namespace Wimbee_Hiring.API.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdWriter"] = new SelectList(_context.Person, "IdPerson", "Discriminator", ticket.IdWriter);
             return View(ticket);
         }
 
@@ -160,17 +163,24 @@ namespace Wimbee_Hiring.API.Controllers
 
 
         // POST: Ticket/Delete/5
+        //méthode modifiée
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var ticket = await _context.Ticket.FindAsync(id);
-            _context.Ticket.Remove(ticket);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            Ticket _ticket = ticket.GetById(id);
+            if (_ticket == null) { return NotFound(); }
+            else
+            {
+                ticket.Delete(_ticket.IdTicket);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
         }
 
-        private bool TicketExists(int _id)
+
+        //méthode modifiée
+        private bool TicketExists(int _id) 
         {
             IEnumerable<Ticket> tickets = ticket.GetAll();
 
@@ -184,9 +194,7 @@ namespace Wimbee_Hiring.API.Controllers
                  return true; 
                   
             }
-
-
-
+            return false;
         }
     }
 }
