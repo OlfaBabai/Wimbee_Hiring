@@ -22,6 +22,7 @@ namespace Wimbee_Hiring.Service
         {
             T exists = Table.Find(objectId);
             Table.Remove(exists);
+             
         }
 
         public List<T> GetAll()

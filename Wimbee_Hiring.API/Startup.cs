@@ -13,8 +13,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Wimbee_Hiring.Models;
 using Wimbee_Hiring.Persistence;
-using Wimbee_Hiring.Persistence.Design_Patterns.UnitOfWork;
-using Wimbee_Hiring.Persistence.Design_Patterns.Factory;
 using Wimbee_Hiring.Service;
 using Wimbee_Hiring.Service.Interfaces;
 
