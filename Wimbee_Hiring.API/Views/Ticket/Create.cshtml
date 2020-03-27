@@ -1,4 +1,5 @@
-﻿@model Wimbee_Hiring.Models.Ticket
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model Wimbee_Hiring.Models.Ticket
 
 @{
     ViewData["Title"] = "Create";
@@ -24,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="IdWriter" class="control-label"></label>
-                <select asp-for="IdWriter" class ="form-control" asp-items="ViewBag.IdWriter"></select>
+                <select asp-for="IdWriter" class="form-control" asp-items="ViewBag.IdWriter"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -12,7 +12,7 @@ namespace Wimbee_Hiring.Service
         private readonly CodingBlastDdContext _context;
         public TicketRepository(CodingBlastDdContext context) : base(context)
         {
-            context = _context;
+            _context=context;
         }
     }
 }

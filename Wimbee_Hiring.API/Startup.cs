@@ -36,6 +36,8 @@ namespace Wimbee_Hiring.API
             services.AddTransient<IGenericRepository<Person>,GenericRepository<Person>>();
             services.AddTransient<IGenericRepository<Ticket>,GenericRepository<Ticket>>();
             services.AddControllers();
+            services.AddMvcCore().AddRazorViewEngine();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,10 +53,13 @@ namespace Wimbee_Hiring.API
             app.UseRouting();
 
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action}/{id?}");
             });
         }
     }

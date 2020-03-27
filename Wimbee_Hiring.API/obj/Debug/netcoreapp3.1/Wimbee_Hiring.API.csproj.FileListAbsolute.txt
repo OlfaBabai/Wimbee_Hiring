@@ -146,7 +146,6 @@ C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreap
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.RazorAssemblyInfo.cache
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.RazorAssemblyInfo.cs
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.TagHelpers.input.cache
@@ -162,3 +161,9 @@ C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreap
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Wimbee_Hiring.API.Views.dll
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Wimbee_Hiring.API.Views.pdb
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.Views.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ViewImports.cshtml.g.cs

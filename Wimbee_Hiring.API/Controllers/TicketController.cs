@@ -12,25 +12,27 @@ using Wimbee_Hiring.Service.Interfaces;
 
 namespace Wimbee_Hiring.API.Controllers
 {
+   
     public class TicketController : Controller
     {
-        private readonly CodingBlastDdContext _context;
-        private GenericRepository<Ticket> ticket;
+        private IGenericRepository<Ticket> ticket;
 
-        public TicketController(GenericRepository<Ticket> _ticket)
+        public TicketController(IGenericRepository<Ticket> _ticket)
         {
-            ticket=_ticket;
+            ticket = _ticket;
         }
-
+        
         // GET: Ticket 
         // méthode modifiée :
-        [HttpGet]
+        [HttpGet, ActionName("Index")]
         public IActionResult Index()
         {
             IEnumerable<Ticket> tickets = ticket.GetAll();
-            return Ok(tickets);
+            return View(tickets);
         }
-        [HttpGet]
+        
+        [HttpGet, ActionName("Details")]
+
         // GET: Ticket/Details/5
         // méthode modifiée :
         public IActionResult Details(int id)
@@ -39,10 +41,10 @@ namespace Wimbee_Hiring.API.Controllers
 
             if (_ticket == null)
             {
-                return NotFound("The ticket couldn't be found.");
+                return NotFound();
             }
 
-            else return Ok(_ticket);
+            else return View(_ticket);
         }
 
         
@@ -50,55 +52,54 @@ namespace Wimbee_Hiring.API.Controllers
         [HttpGet]
         // GET: Ticket/Create
         // méthode get : create | modifiée
-        //public IActionResult Create()
-        //{
-            
-        //    return View();
-        //}
+        public IActionResult Create()
+        {
+
+            return RedirectToAction(nameof(Index));
+        }
 
         // POST: Ticket/Create
         //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        
+        [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
+        public IActionResult Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
         {
             if (ModelState.IsValid)
             {
                 ticket.Insert(tik);
-                await _context.SaveChangesAsync();
+                ticket.Save();
                 return RedirectToAction(nameof(Index));
             }
-            else return RedirectToAction(nameof(Create));
+           return View(ticket);
 
         }
 
+        [HttpGet, ActionName("Edit")]
         // GET: Ticket/Edit/5
         //METHODE GET : edit ticket (non modifiée)
-        //public async Task<IActionResult> Edit(int id)
-        //{
-        //    if (id == 0)
-        //    {
-        //        return NotFound();
-        //    }
+        public IActionResult Edit(int id)
+        {
+            Ticket _ticket = ticket.GetById(id);
 
-        //    Ticket tik = ticket.GetById(id);
-        //    if (tik == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    ViewData["IdWriter"] = new SelectList(_context.Person, "IdPerson", "Discriminator", tik.IdWriter);
-        //    return View(tik);
-        //}
+            if (_ticket == null)
+            {
+                return NotFound();
+            }
+
+            else return View(_ticket);
+        }
 
         // POST: Ticket/Edit/5
         //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
+        public IActionResult Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
         {
             if (id != tik.IdTicket)
             {
@@ -110,7 +111,7 @@ namespace Wimbee_Hiring.API.Controllers
                 try
                 {
                     ticket.Update(tik);
-                    await _context.SaveChangesAsync();
+                    ticket.Save();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -127,7 +128,7 @@ namespace Wimbee_Hiring.API.Controllers
             }
             return View(ticket);
         }
-
+        [HttpGet, ActionName("Delete")]
         // GET: Ticket/Delete/5
         // méthode modifiée :
         public IActionResult Delete(int id)
@@ -138,6 +139,7 @@ namespace Wimbee_Hiring.API.Controllers
                 return BadRequest("Ticket is not found");
             }
             ticket.Delete(_ticket.IdTicket);
+            ticket.Save();
             return NoContent();
         }
 
@@ -161,40 +163,41 @@ namespace Wimbee_Hiring.API.Controllers
         //}
 
 
-
+        
         // POST: Ticket/Delete/5
         //méthode modifiée
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
             Ticket _ticket = ticket.GetById(id);
-            if (_ticket == null) { return NotFound(); }
+            
+            if (_ticket == null) 
+            { 
+                return NotFound();
+            }
             else
             {
                 ticket.Delete(_ticket.IdTicket);
-                await _context.SaveChangesAsync();
+                ticket.Save();
                 return RedirectToAction(nameof(Index));
             }
         }
 
 
-        //méthode modifiée
+        //méthode modifiée :
         private bool TicketExists(int _id) 
         {
             IEnumerable<Ticket> tickets = ticket.GetAll();
 
-            if (_id == 0)
-            {
-                return false;
-            }
+            bool test = false;
             foreach (Ticket item in tickets)
             {
-                if(item.IdTicket==_id)
-                 return true; 
-                  
+                if (item.IdTicket == _id)
+                { test = true; }
+
             }
-            return false;
+            return test;
         }
     }
 }

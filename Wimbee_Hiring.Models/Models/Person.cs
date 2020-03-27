@@ -16,19 +16,4 @@ namespace Wimbee_Hiring.Models
         public ICollection<Ticket> TicketsWritten { set; get; }
     }
 
-    public class Caller : Person
-    {
-        public Caller()
-        {
-            Role ="Caller";
-        }
-    }
-
-    public class Recrutor : Person
-    {
-        public Recrutor()
-        {
-            Role = "Recrutor";
-        }
-    }
 }

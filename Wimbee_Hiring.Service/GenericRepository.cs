@@ -40,6 +40,11 @@ namespace Wimbee_Hiring.Service
             Table.Add(Object);
         }
 
+        public void Save()
+        {
+            context.SaveChanges();
+        }
+
         public void Update(T Object)
         {
             Table.Attach(Object);

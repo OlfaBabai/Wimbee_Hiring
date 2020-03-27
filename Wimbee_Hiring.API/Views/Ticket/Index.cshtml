@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Wimbee_Hiring.Models.Ticket>
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Wimbee_Hiring.Models.Ticket>
 
 @{
     ViewData["Title"] = "Index";
@@ -9,24 +10,39 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NameTicket)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Writer)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+
+
+<table class="table" border="1">
+
+
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdTicket)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NameTicket)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Writer)
+                </th>
+                <th> Other options</th>
+            </tr>
+        </thead>
+
+
     <tbody>
-@foreach (var item in Model) {
+
+
+        @foreach (var item in Model)
+        {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTicket)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NameTicket)
             </td>
@@ -34,11 +50,14 @@
                 @Html.DisplayFor(modelItem => item.State)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdTicket">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdTicket">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdTicket">Delete</a>
+                @Html.DisplayFor(modelItem => item.Writer)
+            </td>
+            <td>
+                <a asp-controller="Ticket" asp-action="Edit" asp-route-id="@item.IdTicket">Edit</a> |
+                <a asp-controller="Ticket" asp-action="Details" asp-route-id="@item.IdTicket">Details</a> |
+                <a asp-controller="Ticket" asp-action="Delete" asp-route-id="@item.IdTicket">Delete</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

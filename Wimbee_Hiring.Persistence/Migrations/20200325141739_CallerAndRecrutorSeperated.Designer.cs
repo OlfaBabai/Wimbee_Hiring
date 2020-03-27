@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wimbee_Hiring.Persistence;
 
 namespace Wimbee_Hiring.Persistence.Migrations
 {
     [DbContext(typeof(CodingBlastDdContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200325141739_CallerAndRecrutorSeperated")]
+    partial class CallerAndRecrutorSeperated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

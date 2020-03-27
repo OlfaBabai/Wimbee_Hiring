@@ -11,7 +11,7 @@ namespace Wimbee_Hiring.Service.Interfaces
         void Insert(T Object);
         void Delete(int objectId);
         void Update(T Object);
-        
+        void Save();
 
     }
 }

@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.API", "Wimbee_Hiring.API\Wimbee_Hiring.API.csproj", "{AA3C0D32-4DB9-41D8-8C10-46B853C5D1BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.Models", "Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj", "{02518358-C760-43B1-A674-E97B366DDC6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.Models", "Wimbee_Hiring.Models\Wimbee_Hiring.Models.csproj", "{02518358-C760-43B1-A674-E97B366DDC6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.Persistence", "Wimbee_Hiring.Persistence\Wimbee_Hiring.Persistence.csproj", "{D7DB4E5F-2807-4E5E-9B78-E625ED6D5248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.Persistence", "Wimbee_Hiring.Persistence\Wimbee_Hiring.Persistence.csproj", "{D7DB4E5F-2807-4E5E-9B78-E625ED6D5248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimbee_Hiring.Service", "Wimbee_Hiring.Service\Wimbee_Hiring.Service.csproj", "{84D3B9E3-6B7A-4380-BBE7-E4944F26B63C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wimbee_Hiring.Service", "Wimbee_Hiring.Service\Wimbee_Hiring.Service.csproj", "{84D3B9E3-6B7A-4380-BBE7-E4944F26B63C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

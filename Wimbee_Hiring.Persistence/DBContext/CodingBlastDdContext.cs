@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Wimbee_Hiring.Models;
+using Wimbee_Hiring.Models.Models;
 
 namespace Wimbee_Hiring.Persistence
 {
@@ -20,7 +21,7 @@ namespace Wimbee_Hiring.Persistence
         public CodingBlastDdContext(DbContextOptions<CodingBlastDdContext> options) : base(options)
         {         }
 
-        public Microsoft.EntityFrameworkCore.DbSet<Person> Person { get; set; }
+        public DbSet<Person> Person { get; set; }
         public DbSet<Caller> Caller { get; set; }
         public DbSet<Recrutor> Recrutor { get; set; }
         public DbSet<Ticket> Ticket { get; set; }
