@@ -7,50 +7,42 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Wimbee_Hiring.Models;
 using Wimbee_Hiring.Persistence;
-using Wimbee_Hiring.Service;
 using Wimbee_Hiring.Service.Interfaces;
 
 namespace Wimbee_Hiring.API.Controllers
 {
-    public class TicketController : Controller
+    public class PersonController : Controller
     {
-        private readonly IGenericRepository<Ticket> ticket;
-        //private readonly CodingBlastDdContext _context;
+        private readonly IGenericRepository<Person> person;
 
-        public TicketController(IGenericRepository<Ticket> _ticket)
+        public PersonController(IGenericRepository<Person> _person)
         {
-            ticket = _ticket;
+            person=_person;
         }
-        
-        // GET: Ticket 
-        // méthode modifiée :
+
+        // GET: Person
         [HttpGet, ActionName("Index")]
         public IActionResult Index()
         {
-            IEnumerable<Ticket> tickets = ticket.GetAll();
-            return View(tickets);
+            IEnumerable<Person> people = person.GetAll();
+            return View(people);
         }
-        
-        [HttpGet, ActionName("Details")]
 
-        // GET: Ticket/Details/5
-        // méthode modifiée :
+        // GET: Person/Details/5
         public IActionResult Details(int id)
         {
-            Ticket _ticket = ticket.GetById(id);
+            Person _person = person.GetById(id);
 
-            if (_ticket == null)
+            if (_person == null)
             {
                 return NotFound();
             }
 
-            else return View(_ticket);
+            else return View(_person);
         }
 
-        
-
         [HttpGet]
-        // GET: Ticket/Create
+        // GET: Person/Create
         // méthode get : create | modifiée
         public IActionResult Create()
         {
@@ -58,49 +50,49 @@ namespace Wimbee_Hiring.API.Controllers
             return View("Create");
         }
 
-        // POST: Ticket/Create
+        // POST: Person/Create
         //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
 
         [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
+        public IActionResult Create([Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
         {
             if (ModelState.IsValid)
             {
-                ticket.Insert(tik);
-                ticket.Save();
+                person.Insert(per);
+                person.Save();
                 return RedirectToAction(nameof(Index));
             }
-           return View(ticket);
+            return View(person);
         }
 
         [HttpGet, ActionName("Edit")]
-        // GET: Ticket/Edit/5
-        //METHODE GET : edit ticket (non modifiée)
+        // GET: Person/Edit/5
+        //METHODE GET : edit person (non modifiée)
         public IActionResult Edit(int id)
         {
-            Ticket _ticket = ticket.GetById(id);
+            Person _person = person.GetById(id);
 
-            if (_ticket == null)
+            if (_person == null)
             {
                 return NotFound();
             }
 
-            else return View(_ticket);
+            else return View(_person);
         }
 
-        // POST: Ticket/Edit/5
+        // POST: Person/Edit/5
         //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        
+
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
+        public IActionResult Edit(int id, [Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
         {
-            if (id != tik.IdTicket)
+            if (id != per.IdPerson)
             {
                 return NotFound();
             }
@@ -109,12 +101,12 @@ namespace Wimbee_Hiring.API.Controllers
             {
                 try
                 {
-                    ticket.Update(tik);
-                    ticket.Save();
+                    person.Update(per);
+                    person.Save();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TicketExists(tik.IdTicket))
+                    if (!PersonExists(per.IdPerson))
                     {
                         return NotFound();
                     }
@@ -125,74 +117,64 @@ namespace Wimbee_Hiring.API.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(ticket);
+            return View(person);
         }
-        
+
         [HttpGet, ActionName("Delete")]
-        // GET: Ticket/Delete/5
+        // GET: Person/Delete/5
         // méthode modifiée :
         public IActionResult Delete(int id)
         {
-            Ticket _ticket = ticket.GetById(id);
-            if (_ticket == null)
+            Person _person = person.GetById(id);
+            if (_person == null)
             {
-                return BadRequest("Ticket is not found");
+                return BadRequest("Person is not found");
             }
-            ticket.Delete(_ticket.IdTicket);
-            ticket.Save();
+            person.Delete(_person.IdPerson);
+            person.Save();
             return RedirectToAction(nameof(Index));
         }
 
-        // méthode par défaut :
-        //public async Task<IActionResult> Delete(int? id)
+        //// POST: Person/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
         //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var ticket = await _context.Ticket
-        //        .Include(t => t.Writer)
-        //        .FirstOrDefaultAsync(m => m.IdTicket == id);
-        //    if (ticket == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(ticket);
+        //    var person = await _context.Person.FindAsync(id);
+        //    _context.Person.Remove(person);
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction(nameof(Index));
         //}
 
-        
-        // POST: Ticket/Delete/5
+        // POST: Person/Delete/5
         //méthode modifiée
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Ticket _ticket = ticket.GetById(id);
-            
-            if (_ticket == null) 
-            { 
+            Person _person = person.GetById(id);
+
+            if (_person == null)
+            {
                 return NotFound();
             }
             else
             {
-                ticket.Delete(_ticket.IdTicket);
-                ticket.Save();
+                person.Delete(_person.IdPerson);
+                person.Save();
                 return RedirectToAction(nameof(Index));
             }
         }
 
-
         //méthode modifiée :
-        private bool TicketExists(int _id) 
+        private bool PersonExists(int _id)
         {
-            IEnumerable<Ticket> tickets = ticket.GetAll();
+            IEnumerable<Person> people = person.GetAll();
 
             bool test = false;
-            foreach (Ticket item in tickets)
+            foreach (Person item in people)
             {
-                if (item.IdTicket == _id)
+                if (item.IdPerson == _id)
                 { test = true; }
 
             }

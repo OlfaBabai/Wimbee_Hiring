@@ -167,3 +167,8 @@ C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreap
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Wimbee_Hiring.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ViewImports.cshtml.g.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Person\Create.cshtml.g.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Person\Delete.cshtml.g.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Person\Details.cshtml.g.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Person\Edit.cshtml.g.cs
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.API\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
