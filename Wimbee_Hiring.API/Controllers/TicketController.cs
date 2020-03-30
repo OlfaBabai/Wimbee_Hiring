@@ -15,7 +15,7 @@ namespace Wimbee_Hiring.API.Controllers
    
     public class TicketController : Controller
     {
-        private IGenericRepository<Ticket> ticket;
+        private readonly IGenericRepository<Ticket> ticket;
 
         public TicketController(IGenericRepository<Ticket> _ticket)
         {
@@ -55,14 +55,14 @@ namespace Wimbee_Hiring.API.Controllers
         public IActionResult Create()
         {
 
-            return RedirectToAction(nameof(Index));
+            return View("Create");
         }
 
         // POST: Ticket/Create
         //méthode modifiée
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        
+
         [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
