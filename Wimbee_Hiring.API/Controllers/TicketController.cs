@@ -16,6 +16,7 @@ namespace Wimbee_Hiring.API.Controllers
     public class TicketController : Controller
     {
         private readonly IGenericRepository<Ticket> ticket;
+        //private readonly CodingBlastDdContext _context;
 
         public TicketController(IGenericRepository<Ticket> _ticket)
         {
