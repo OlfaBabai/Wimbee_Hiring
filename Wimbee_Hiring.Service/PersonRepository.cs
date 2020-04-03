@@ -7,8 +7,8 @@ using Wimbee_Hiring.Service.Interfaces;
 
 namespace Wimbee_Hiring.Service
 {
-    public class PersonRepository :  GenericRepository<Person> , IPersonRepository
-    {
+    public class PersonRepository :  GenericRepository<Person> ,  IGenericRepository<Person>
+        {
         private readonly CodingBlastDdContext _context ;
         public PersonRepository(CodingBlastDdContext context) : base(context)
         {

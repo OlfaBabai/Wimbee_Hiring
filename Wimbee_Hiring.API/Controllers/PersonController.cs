@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Wimbee_Hiring.Models;
 using Wimbee_Hiring.Persistence;
+using Wimbee_Hiring.Service;
 using Wimbee_Hiring.Service.Interfaces;
 
 namespace Wimbee_Hiring.API.Controllers
@@ -17,84 +18,53 @@ namespace Wimbee_Hiring.API.Controllers
 
         public PersonController(IGenericRepository<Person> _person)
         {
-            person=_person;
+            person = _person;
         }
 
-        // GET: Person
-        [HttpGet, ActionName("Index")]
-        public IActionResult Index()
+        public IEnumerable<Person> Index()
         {
             IEnumerable<Person> people = person.GetAll();
-            return View(people);
+            return people;
         }
 
-        // GET: Person/Details/5
-        public IActionResult Details(int id)
+        public Person Details(int id)
         {
             Person _person = person.GetById(id);
-
-            if (_person == null)
-            {
-                return NotFound();
-            }
-
-            else return View(_person);
+            return _person;
         }
 
         [HttpGet]
-        // GET: Person/Create
-        // méthode get : create | modifiée
-        public IActionResult Create()
+        public IEnumerable<Person> Create([Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
         {
-
-            return View("Create");
-        }
-
-        // POST: Person/Create
-        //méthode modifiée
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-
-        [HttpPost, ActionName("Create")]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
-        {
+            IEnumerable<Person> people = person.GetAll();
             if (ModelState.IsValid)
             {
                 person.Insert(per);
                 person.Save();
-                return RedirectToAction(nameof(Index));
+                return people;
             }
-            return View(person);
+            return people;
         }
 
-        [HttpGet, ActionName("Edit")]
-        // GET: Person/Edit/5
-        //METHODE GET : edit person (non modifiée)
-        public IActionResult Edit(int id)
+        [HttpGet]
+        public Person Edit(int id)
         {
             Person _person = person.GetById(id);
 
             if (_person == null)
             {
-                return NotFound();
+                Console.WriteLine("Person not found");
             }
 
-            else return View(_person);
+            return _person;
         }
 
-        // POST: Person/Edit/5
-        //méthode modifiée
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-
         [HttpPost, ActionName("Edit")]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
+        public Person Edit(int id, [Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
         {
             if (id != per.IdPerson)
             {
-                return NotFound();
+                Console.WriteLine("Person not found");
             }
 
             if (ModelState.IsValid)
@@ -108,65 +78,18 @@ namespace Wimbee_Hiring.API.Controllers
                 {
                     if (!PersonExists(per.IdPerson))
                     {
-                        return NotFound();
+                        Console.WriteLine("Person not found");
                     }
                     else
                     {
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return per;
             }
-            return View(person);
+            return per;
         }
 
-        [HttpGet, ActionName("Delete")]
-        // GET: Person/Delete/5
-        // méthode modifiée :
-        public IActionResult Delete(int id)
-        {
-            Person _person = person.GetById(id);
-            if (_person == null)
-            {
-                return BadRequest("Person is not found");
-            }
-            person.Delete(_person.IdPerson);
-            person.Save();
-            return RedirectToAction(nameof(Index));
-        }
-
-        //// POST: Person/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var person = await _context.Person.FindAsync(id);
-        //    _context.Person.Remove(person);
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(Index));
-        //}
-
-        // POST: Person/Delete/5
-        //méthode modifiée
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            Person _person = person.GetById(id);
-
-            if (_person == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                person.Delete(_person.IdPerson);
-                person.Save();
-                return RedirectToAction(nameof(Index));
-            }
-        }
-
-        //méthode modifiée :
         private bool PersonExists(int _id)
         {
             IEnumerable<Person> people = person.GetAll();
@@ -180,5 +103,6 @@ namespace Wimbee_Hiring.API.Controllers
             }
             return test;
         }
+
     }
 }

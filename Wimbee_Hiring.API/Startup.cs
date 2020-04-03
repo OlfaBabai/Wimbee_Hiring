@@ -35,9 +35,10 @@ namespace Wimbee_Hiring.API
             services.AddDbContext<CodingBlastDdContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PersonDBConnection")));
             services.AddTransient<IGenericRepository<Person>,GenericRepository<Person>>();
             services.AddTransient<IGenericRepository<Ticket>,GenericRepository<Ticket>>();
+            services.AddScoped<IGenericRepository<Person>, GenericRepository<Person>>();
+            services.AddScoped<IGenericRepository<Ticket>, GenericRepository<Ticket>>();
+            services.AddScoped<IGenericRepository<Person>, GenericRepository<Person>>();
             services.AddControllers();
-            services.AddMvcCore().AddRazorViewEngine();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +60,7 @@ namespace Wimbee_Hiring.API
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller}/{action}/{id?}");
+                    pattern: "{controller}/{action}/{id?}/");
             });
         }
     }

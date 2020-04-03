@@ -7,7 +7,7 @@ using Wimbee_Hiring.Service.Interfaces;
 
 namespace Wimbee_Hiring.Service
 {
-    public class TicketRepository : GenericRepository<Ticket> , ITicketRepository
+    public class TicketRepository : GenericRepository<Ticket> , IGenericRepository<Ticket>
     {
         private readonly CodingBlastDdContext _context;
         public TicketRepository(CodingBlastDdContext context) : base(context)
