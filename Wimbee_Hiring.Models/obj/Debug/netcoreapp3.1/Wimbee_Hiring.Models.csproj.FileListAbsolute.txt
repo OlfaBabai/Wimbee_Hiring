@@ -7,3 +7,4 @@ C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Models\obj\Debug\netcor
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Models\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Models.AssemblyInfo.cs
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Models\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Models.dll
 C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Models\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Models.pdb
+C:\Users\pc\Documents\GitHub\Wimbee_Hiring\Wimbee_Hiring.Models\obj\Debug\netcoreapp3.1\Wimbee_Hiring.Models.csprojAssemblyReference.cache

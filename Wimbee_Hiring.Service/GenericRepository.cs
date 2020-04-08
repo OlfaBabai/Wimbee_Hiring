@@ -18,6 +18,7 @@ namespace Wimbee_Hiring.Service
             context = _context;
             Table =context.Set<T>();
         }
+        
         public void Delete(int objectId)
         {
             T exists = Table.Find(objectId);

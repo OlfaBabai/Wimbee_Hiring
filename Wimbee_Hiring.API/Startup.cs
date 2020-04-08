@@ -60,7 +60,7 @@ namespace Wimbee_Hiring.API
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller}/{action}/{id?}/");
+                    pattern: "api/{controller}/[action]/{id?}/");
             });
         }
     }

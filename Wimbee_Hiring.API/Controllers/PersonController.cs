@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Wimbee_Hiring.Models;
-using Wimbee_Hiring.Persistence;
-using Wimbee_Hiring.Service;
 using Wimbee_Hiring.Service.Interfaces;
+using Wimbee_Hiring.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Wimbee_Hiring.API.Controllers
 {
-    public class PersonController : Controller
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class PersonController : ControllerBase
     {
         private readonly IGenericRepository<Person> person;
 
@@ -21,46 +21,34 @@ namespace Wimbee_Hiring.API.Controllers
             person = _person;
         }
 
+        [HttpGet]
         public IEnumerable<Person> Index()
         {
             IEnumerable<Person> people = person.GetAll();
             return people;
         }
 
+        [HttpGet("{id}")]
         public Person Details(int id)
         {
             Person _person = person.GetById(id);
             return _person;
         }
 
-        [HttpGet]
-        public IEnumerable<Person> Create([Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
+        [HttpPost]
+        public IEnumerable<Person> Create([Bind("IdTicket,NameTicket,State,IdWriter")] Person per)
         {
             IEnumerable<Person> people = person.GetAll();
             if (ModelState.IsValid)
             {
                 person.Insert(per);
                 person.Save();
-                return people;
             }
             return people;
         }
 
-        [HttpGet]
-        public Person Edit(int id)
-        {
-            Person _person = person.GetById(id);
-
-            if (_person == null)
-            {
-                Console.WriteLine("Person not found");
-            }
-
-            return _person;
-        }
-
-        [HttpPost, ActionName("Edit")]
-        public Person Edit(int id, [Bind("IdPerson,FirstName,LastName,Job,Role")] Person per)
+        [HttpPut("{id}")]
+        public Person Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Person per)
         {
             if (id != per.IdPerson)
             {
@@ -76,7 +64,7 @@ namespace Wimbee_Hiring.API.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(per.IdPerson))
+                    if (!TicketExists(per.IdPerson))
                     {
                         Console.WriteLine("Person not found");
                     }
@@ -90,7 +78,20 @@ namespace Wimbee_Hiring.API.Controllers
             return per;
         }
 
-        private bool PersonExists(int _id)
+        [HttpDelete("{id}")]
+        public ActionResult<Person> DeleteConfirmed(int id)
+        {
+            Person _person = person.GetById(id);
+            if (_person != null)
+            {
+                person.Delete(_person.IdPerson);
+                person.Save();
+                return RedirectToAction("");
+            }
+            else return NotFound();
+        }
+
+        private bool TicketExists(int _id)
         {
             IEnumerable<Person> people = person.GetAll();
 
@@ -103,6 +104,7 @@ namespace Wimbee_Hiring.API.Controllers
             }
             return test;
         }
+
 
     }
 }
