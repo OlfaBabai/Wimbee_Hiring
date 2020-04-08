@@ -38,6 +38,7 @@ namespace Wimbee_Hiring.API
             services.AddScoped<IGenericRepository<Person>, GenericRepository<Person>>();
             services.AddScoped<IGenericRepository<Ticket>, GenericRepository<Ticket>>();
             services.AddScoped<IGenericRepository<Person>, GenericRepository<Person>>();
+
             services.AddControllers();
         }
 
@@ -60,7 +61,7 @@ namespace Wimbee_Hiring.API
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "api/{controller}/[action]/{id?}/");
+                    pattern: "api/{controller}/{id?}/");
             });
         }
     }

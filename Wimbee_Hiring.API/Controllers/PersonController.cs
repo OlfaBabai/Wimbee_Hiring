@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Wimbee_Hiring.API.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class PersonController : ControllerBase
     {

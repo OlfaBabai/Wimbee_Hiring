@@ -45,11 +45,13 @@ namespace Wimbee_Hiring.Persistence
                 entity.Property(p => p.FirstName).HasColumnName("FirstName");
                 entity.Property(p => p.LastName).HasColumnName("LastName");
                 entity.Property(p => p.Job).HasColumnName("Job");
-                entity.Property(p => p.Role).HasColumnName("Role");
 
+                entity.HasDiscriminator<String>("Role")
+                .HasValue<Caller>("Caller")
+                .HasValue<Recrutor>("Recrutor");
 
             });
-                                              
+
             modelBuilder.Entity<Ticket>(entity =>
             {
                 // Ticket's Properties
@@ -65,7 +67,6 @@ namespace Wimbee_Hiring.Persistence
                 entity.Property(t => t.IdTicket).HasColumnName("IdTicket");
                 entity.Property(t => t.NameTicket).HasColumnName("NameTicket");
                 entity.Property(t => t.State).HasColumnName("State");
-                entity.Property(t => t.IdWriter).HasColumnName("IdWriter");
 
             });
 

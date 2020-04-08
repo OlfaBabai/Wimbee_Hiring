@@ -7,9 +7,6 @@ namespace Wimbee_Hiring.Models.Models
 
     public class Caller : Person
     {
-        public Caller()
-        {
-            Role = "Caller";
-        }
+        
     }
 }
