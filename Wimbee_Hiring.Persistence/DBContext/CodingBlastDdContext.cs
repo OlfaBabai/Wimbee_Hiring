@@ -60,7 +60,7 @@ namespace Wimbee_Hiring.Persistence
                 entity.HasKey(t => t.IdTicket);
                 entity.Property(t => t.NameTicket).IsRequired();
                 entity.Property(t => t.State).IsRequired();
-                entity.HasOne(t => t.Writer).WithMany(p => p.TicketsWritten).HasForeignKey(t=>t.IdWriter);
+                entity.HasOne(t => t.Writer).WithMany(p => p.TicketsWritten).HasForeignKey(t=>t.IdWriter).IsRequired();
 
                 // Ticket's table configuration
 
