@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wimbee_Hiring.Persistence;
 
 namespace Wimbee_Hiring.Persistence.Migrations
 {
     [DbContext(typeof(CodingBlastDdContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200602094840_emailandpasswordUpdated")]
+    partial class emailandpasswordUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,7 +30,7 @@ namespace Wimbee_Hiring.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnName("Email")
+                        .HasColumnName("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
@@ -48,7 +50,7 @@ namespace Wimbee_Hiring.Persistence.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnName("Password")
+                        .HasColumnName("Password1")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")

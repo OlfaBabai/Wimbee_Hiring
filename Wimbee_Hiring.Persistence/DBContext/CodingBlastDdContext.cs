@@ -34,6 +34,8 @@ namespace Wimbee_Hiring.Persistence
                 // Person's Properties
 
                 entity.HasKey(p => p.IdPerson);
+                entity.Property(p=>p.Email).IsRequired();
+                entity.Property(p => p.Password).IsRequired();
                 entity.Property(p => p.FirstName).IsRequired();
                 entity.Property(p => p.LastName).IsRequired();
                 entity.Property(p => p.Job).IsRequired();
@@ -42,6 +44,8 @@ namespace Wimbee_Hiring.Persistence
 
                 entity.ToTable("Person");
                 entity.Property(p => p.IdPerson).HasColumnName("IdPerson");
+                entity.Property(p => p.Email).HasColumnName("Email");
+                entity.Property(p => p.Password).HasColumnName("Password");
                 entity.Property(p => p.FirstName).HasColumnName("FirstName");
                 entity.Property(p => p.LastName).HasColumnName("LastName");
                 entity.Property(p => p.Job).HasColumnName("Job");
