@@ -55,7 +55,11 @@ namespace Wimbee_Hiring.API
             app.UseRouting();
 
             app.UseAuthorization();
-            
+
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {

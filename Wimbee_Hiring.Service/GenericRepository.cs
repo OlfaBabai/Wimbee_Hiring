@@ -31,6 +31,8 @@ namespace Wimbee_Hiring.Service
             return Table.ToList();
         }
 
+       
+
         public T GetById(int objectId)
         {
             return Table.Find(objectId);
