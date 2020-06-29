@@ -30,7 +30,7 @@ namespace Wimbee_Hiring.API.Controllers
             _config = configuration;
             person = p;
         }
-
+        
         [HttpGet("{email}/{pwd}")]
         public IActionResult Login(string email, string pwd)
         {
@@ -93,28 +93,28 @@ namespace Wimbee_Hiring.API.Controllers
             return "Bienvenu(e)" + userName;
         }
 
-        //[HttpGet("{email}")]
-        //public Person SearchEmail(string email)
-        //{
-        //    return personRepository.GetByEmail(email);
-        //}
+        [HttpGet("{email}")]
+        public Person SearchEmail(string email)
+        {
+            return personRepository.GetByEmail(email);
+        }
 
-        //public bool Verifier(string email, string pwd)
-        //{
-        //    bool test;
-        //    Person p = new Person();
-        //    p = personRepository.GetByEmail(email);
-        //    if (p != null)
-        //    {
-        //        if (p.Password == pwd)
-        //        {
-        //            test=true;
-        //        }
-        //        else test=false;
-        //    }
-        //    else test=false;
-        //    return test;
-        //}
+        public bool Verifier(string email, string pwd)
+        {
+            bool test;
+            Person p = new Person();
+            p = personRepository.GetByEmail(email);
+            if (p != null)
+            {
+                if (p.Password == pwd)
+                {
+                    test = true;
+                }
+                else test = false;
+            }
+            else test = false;
+            return test;
+        }
 
     }
 }

@@ -35,18 +35,27 @@ namespace Wimbee_Hiring.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("CorsPolicy",
+            //        builder => builder.AllowAnyOrigin()
+            //            .AllowAnyMethod()
+            //            .AllowAnyHeader());
+            //});
+
             services.AddDbContext<CodingBlastDdContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PersonDBConnection")));
             services.AddTransient<IGenericRepository<Person>,GenericRepository<Person>>();
             services.AddTransient<IGenericRepository<Ticket>,GenericRepository<Ticket>>();
             services.AddScoped<IGenericRepository<Person>, GenericRepository<Person>>();
             services.AddScoped<IGenericRepository<Ticket>, GenericRepository<Ticket>>();
             services.AddScoped<IGenericRepository<Person>, GenericRepository<Person>>();
-            
-            services.AddCors(options => {
-                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials().Build());
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().Build());
 
             });
-            
+
             services.AddControllers();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
@@ -80,6 +89,8 @@ namespace Wimbee_Hiring.API
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            //app.UseCors("CorsPolicy");
 
             app.UseCors(builder => builder
                 .AllowAnyOrigin()
