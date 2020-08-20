@@ -36,19 +36,25 @@ namespace Wimbee_Hiring.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<Ticket> Create([Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
+        public IEnumerable<Ticket> Create(Ticket tik)
         {
-            IEnumerable<Ticket> tickets = ticket.GetAll();
-            if (ModelState.IsValid)
+           IEnumerable<Ticket> tickets = ticket.GetAll();
+            bool test = false;
+            foreach (Ticket ticket in tickets)
+            {
+                if (tik.NameTicket == ticket.NameTicket) { test = true; }
+            }
+            if (ModelState.IsValid && test==false)
             {
                 ticket.Insert(tik);
                 ticket.Save();
+                return tickets;
             }
-            return tickets;
+            return null;
         }
 
         [HttpPut("{id}")]
-        public Ticket Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Ticket tik)
+        public Ticket Edit(int id, [Bind("IdTicket,NameTicket,StateTraitement,StateValidation,Poste,Departement,CompetenceTechnique,CompetenceFonctionnelle,SoftSkills,Certification,NombreAnnee,Motif,NameProjet,NameClient,DureeInterProjet,ChargeInterProjet,LieuInterProjet,Confirmation,NameOpportunite,NomProspect,DureeInterOpportunite,ChargeInterOpportunite,LieuInterOpportunite,Probabilite,Description,DateDebutSouhaite,DateDebutPlutard,Urgence,Importance,SalaireBud,PackFinancierAnnuel,Budgetisation,Optionnel,IdWriter")] Ticket tik)
         {
             if (id != tik.IdTicket)
             {

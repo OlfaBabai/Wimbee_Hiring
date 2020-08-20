@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Wimbee_Hiring.Models.Models
 {
-    public class Recrutor : Person
+
+    public class Demandeur : Person
     {
         
     }

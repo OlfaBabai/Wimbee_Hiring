@@ -30,7 +30,7 @@ namespace Wimbee_Hiring.API.Controllers
             _config = configuration;
             person = p;
         }
-        
+
         [HttpGet("{email}/{pwd}")]
         public IActionResult Login(string email, string pwd)
         {
@@ -83,6 +83,7 @@ namespace Wimbee_Hiring.API.Controllers
 
             return encodetoken;
         }
+
         [Authorize]
         [HttpPost("Post")]
         public string Post()

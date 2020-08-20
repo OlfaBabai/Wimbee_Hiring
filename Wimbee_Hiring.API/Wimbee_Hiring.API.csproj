@@ -31,5 +31,9 @@
     <ProjectReference Include="..\Wimbee_Hiring.Service\Wimbee_Hiring.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\fichiers\" />
+  </ItemGroup>
+
 
 </Project>

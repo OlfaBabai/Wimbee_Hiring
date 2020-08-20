@@ -36,19 +36,29 @@ namespace Wimbee_Hiring.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<Person> Create([Bind("IdTicket,NameTicket,State,IdWriter")] Person per)
+        public IEnumerable<Person> Create([Bind("IdPerson,NamePerson,Job,Departement")] Person per)
         {
             IEnumerable<Person> people = person.GetAll();
+            bool test = false;
+            foreach(Person person in people)
+            {
+                if (per.Email==person.Email) { test = true; }
+            }
             if (ModelState.IsValid)
             {
-                person.Insert(per);
-                person.Save();
+                if (test==false)
+                {
+                    person.Insert(per);
+                    person.Save();
+                    return people;
+                }
+                else return null;
             }
-            return people;
+            else return null;
         }
 
         [HttpPut("{id}")]
-        public Person Edit(int id, [Bind("IdTicket,NameTicket,State,IdWriter")] Person per)
+        public Person Edit(int id, [Bind("IdPerson,NamePerson,Job,Departement")] Person per)
         {
             if (id != per.IdPerson)
             {
@@ -64,7 +74,7 @@ namespace Wimbee_Hiring.API.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TicketExists(per.IdPerson))
+                    if (!PersonExists(per.IdPerson))
                     {
                         Console.WriteLine("Person not found");
                     }
@@ -91,7 +101,7 @@ namespace Wimbee_Hiring.API.Controllers
             else return NotFound();
         }
 
-        private bool TicketExists(int _id)
+        private bool PersonExists(int _id)
         {
             IEnumerable<Person> people = person.GetAll();
 

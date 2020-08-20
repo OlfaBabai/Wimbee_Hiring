@@ -14,9 +14,47 @@ namespace Wimbee_Hiring.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.2")
+                .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Wimbee_Hiring.Models.Models.Candidature", b =>
+                {
+                    b.Property<int>("IdCandidature")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("IdCandidature")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CV")
+                        .IsRequired()
+                        .HasColumnName("CV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EtatCandidature")
+                        .IsRequired()
+                        .HasColumnName("EtatCandidat")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdTicket")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomCandidat")
+                        .IsRequired()
+                        .HasColumnName("NomCandidat")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrenomCandidat")
+                        .IsRequired()
+                        .HasColumnName("PrenomCandidat")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdCandidature");
+
+                    b.HasIndex("IdTicket");
+
+                    b.ToTable("Candidature");
+                });
 
             modelBuilder.Entity("Wimbee_Hiring.Models.Person", b =>
                 {
@@ -25,6 +63,11 @@ namespace Wimbee_Hiring.Persistence.Migrations
                         .HasColumnName("IdPerson")
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Departement")
+                        .IsRequired()
+                        .HasColumnName("Departement")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -70,17 +113,145 @@ namespace Wimbee_Hiring.Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Budgetisation")
+                        .HasColumnName("Budgetisation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Certification")
+                        .IsRequired()
+                        .HasColumnName("Certification")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ChargeInterOpportunite")
+                        .HasColumnName("ChargeInterOpportunite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ChargeInterProjet")
+                        .HasColumnName("ChargeInterProjet")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompetenceFonctionnelle")
+                        .IsRequired()
+                        .HasColumnName("CompetenceFonctionnelle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompetenceTechnique")
+                        .IsRequired()
+                        .HasColumnName("CompetenceTechnique")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Confirmation")
+                        .HasColumnName("Confirmation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateDebutPlutard")
+                        .HasColumnName("DateDebutPlutard")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateDebutSouhaite")
+                        .HasColumnName("DateDebutSouhaite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DepartementTicket")
+                        .IsRequired()
+                        .HasColumnName("Departement")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnName("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DureeInterOpportunite")
+                        .HasColumnName("DureeInterOpportunite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DureeInterProjet")
+                        .HasColumnName("DureeInterProjet")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("IdWriter")
                         .HasColumnType("int");
+
+                    b.Property<string>("Importance")
+                        .HasColumnName("Importance")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LieuInterOpportunite")
+                        .HasColumnName("LieuInterOpportunite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LieuInterProjet")
+                        .HasColumnName("LieuInterProjet")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Motif")
+                        .IsRequired()
+                        .HasColumnName("Motif")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameClient")
+                        .HasColumnName("NameClient")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameOpportunite")
+                        .HasColumnName("NameOpportunite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameProjet")
+                        .HasColumnName("NameProjet")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameTicket")
                         .IsRequired()
                         .HasColumnName("NameTicket")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("State")
+                    b.Property<string>("NomProspect")
+                        .HasColumnName("NomProspect")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("NombreAnnee")
+                        .HasColumnName("NombreAnnee")
+                        .HasColumnType("real");
+
+                    b.Property<string>("Optionnel")
+                        .HasColumnName("Optionnel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("PackFinancierAnnuel")
+                        .HasColumnName("PackFinancierAnnuel")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Poste")
                         .IsRequired()
-                        .HasColumnName("State")
+                        .HasColumnName("Poste")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Probabilite")
+                        .HasColumnName("Probabilite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("SalaireBud")
+                        .HasColumnName("SalaireBud")
+                        .HasColumnType("float");
+
+                    b.Property<string>("SoftSkills")
+                        .IsRequired()
+                        .HasColumnName("SoftSkills")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StateTraitement")
+                        .IsRequired()
+                        .HasColumnName("StateTraitement")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StateValidation")
+                        .IsRequired()
+                        .HasColumnName("StateValidation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Urgence")
+                        .HasColumnName("Urgence")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdTicket");
@@ -90,18 +261,27 @@ namespace Wimbee_Hiring.Persistence.Migrations
                     b.ToTable("Ticket");
                 });
 
-            modelBuilder.Entity("Wimbee_Hiring.Models.Models.Caller", b =>
+            modelBuilder.Entity("Wimbee_Hiring.Models.Models.Demandeur", b =>
                 {
                     b.HasBaseType("Wimbee_Hiring.Models.Person");
 
-                    b.HasDiscriminator().HasValue("Caller");
+                    b.HasDiscriminator().HasValue("Demandeur");
                 });
 
-            modelBuilder.Entity("Wimbee_Hiring.Models.Models.Recrutor", b =>
+            modelBuilder.Entity("Wimbee_Hiring.Models.Models.Recruteur", b =>
                 {
                     b.HasBaseType("Wimbee_Hiring.Models.Person");
 
-                    b.HasDiscriminator().HasValue("Recrutor");
+                    b.HasDiscriminator().HasValue("Recruteur");
+                });
+
+            modelBuilder.Entity("Wimbee_Hiring.Models.Models.Candidature", b =>
+                {
+                    b.HasOne("Wimbee_Hiring.Models.Ticket", "Demande")
+                        .WithMany("Candidatures")
+                        .HasForeignKey("IdTicket")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Wimbee_Hiring.Models.Ticket", b =>

@@ -25,26 +25,20 @@ namespace Wimbee_Hiring.Service
         }
     }
 
-    public class RecrutorRepository : PersonRepository
+    public class RecruteuRepository : PersonRepository
     {
-        public RecrutorRepository(CodingBlastDdContext context) : base(context)
+        public RecruteuRepository(CodingBlastDdContext context) : base(context)
         {
-            
+        
         }
-
-        public void PostResume()
-        {
-            Console.WriteLine("Dépôt des Cvs");
-        }
-
-
     }
 
-    public class CallerRepository : PersonRepository
+    public class DemandeurRepository : PersonRepository
     {
-        public CallerRepository(CodingBlastDdContext context) : base(context)
+        public DemandeurRepository(CodingBlastDdContext context) : base(context)
         {
 
         }
     }
+
 }
